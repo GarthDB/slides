@@ -1,0 +1,19 @@
+{
+  "name": "component-schema-for-designers",
+  "version": "1.0.0",
+  "description": "Component Schemas for Spectrum Designers presentation",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export",
+    "export-pdf": "slidev export --format pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.47.0",
+    "@slidev/theme-apple-basic": "^0.25.1"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.47.0"
+  }
+}
+
