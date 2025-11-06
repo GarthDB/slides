@@ -1,0 +1,9 @@
+# Public Assets Directory
+
+Place your images and assets here.
+
+## Expected Files
+
+- `component-options-screenshot.png` - Screenshot of the S2 component options table from https://s2.spectrum.corp.adobe.com/page/action-button/#component-options
+
+Images placed in this directory can be referenced in slides using `/filename.ext`
