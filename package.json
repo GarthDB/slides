@@ -1,0 +1,38 @@
+{
+  "name": "design-data-onsite-presentations",
+  "version": "1.0.0",
+  "description": "Slidev presentations for Design Data Onsite 2025",
+  "scripts": {
+    "dev": "slidev day1-data-system-overview.md --open",
+    "dev:day1": "slidev day1-data-system-overview.md --open",
+    "dev:day2-engineering": "slidev day2-engineering-strategy.md --open",
+    "dev:complexity": "slidev reducing-complexity.md --open", 
+    "dev:multiplatform": "slidev multi-platform-strategy.md --open",
+    "dev:original": "slidev data-system-overview.md --open",
+    "dev:governance": "slidev governance-meeting-nov-2025.md --open",
+    "dev:lifecycle": "slidev token-lifecycle-metadata.md --open",
+    "dev:sourcemap": "slidev token-sourcemap-poc.md --open",
+    "dev:dtcg": "slidev dtcg-format-output.md --open",
+    "build": "npm run build:day1 && npm run build:day2-engineering && npm run build:complexity && npm run build:multiplatform",
+    "build:day1": "slidev build day1-data-system-overview.md --out dist/day1-overview",
+    "build:day2-engineering": "slidev build day2-engineering-strategy.md --out dist/day2-engineering", 
+    "build:complexity": "slidev build reducing-complexity.md --out dist/complexity",
+    "build:multiplatform": "slidev build multi-platform-strategy.md --out dist/multiplatform",
+    "build:original": "slidev build data-system-overview.md --out dist/original",
+    "export": "npm run export:day1 && npm run export:day2-engineering && npm run export:complexity && npm run export:multiplatform",
+    "export:day1": "slidev export day1-data-system-overview.md --output exports/day1-data-system-overview.pdf",
+    "export:day2-engineering": "slidev export day2-engineering-strategy.md --output exports/day2-engineering-strategy.pdf",
+    "export:complexity": "slidev export reducing-complexity.md --output exports/reducing-complexity.pdf",
+    "export:multiplatform": "slidev export multi-platform-strategy.md --output exports/multi-platform-strategy.pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-default": "latest"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.40.0"
+  },
+  "keywords": ["slidev", "presentation", "design-data", "adobe"],
+  "author": "Garth Braithwaite <garthdb@gmail.com>",
+  "license": "Apache-2.0"
+}
