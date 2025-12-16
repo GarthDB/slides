@@ -1,0 +1,232 @@
+Spectrum Tokens
+Component API progress
+
+The problem
+Current Spectrum Tokens pain points
+
+• Human error
+• Predictability
+• Truth in too many places
+• Spectrum Tokens
+• Excel
+
+fi
+
+• Spec les
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+
+• Component Token relationships
+• Token Structure (typing, schema, validation)
+• Component Options API
+• Deprecation
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+
+• Component Token relationships
+• Token Structure (typing, schema, validation)
+✅
+• Component Options API
+• Deprecation
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+
+• Component Token relationships
+• Token Structure (typing, schema, validation)
+✅
+• Component Options API✅
+• Deprecation
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+
+• Component Token relationships
+• Token Structure (typing, schema, validation)
+✅
+• Component Options API✅
+• Deprecation🚧
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+🚧
+• Component Token relationships
+
+• Token Structure (typing, schema, validation)
+✅
+• Component Options API✅
+• Deprecation🚧
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+🚧
+• Component Token relationships
+
+• Token Structure (typing, schema, validation)
+✅
+• Component Options API✅
+• Deprecation🚧
+Token Name Structure
+
+Proposed Solutions
+What could be changed in Spectrum Tokens to address current shortcomings?
+🚧
+• Component Token relationships
+
+• Token Structure (typing, schema, validation)
+✅
+• Component Options API✅
+• Deprecation🚧
+Token Name Structure🚧
+
+Token Structure
+
+Token Structure
+Schema
+
+Token Structure
+Schema
+
+Token Structure
+Schema
+
+• Now
+• Schema added
+• Found some structural issues
+• Automated testing
+• Some alignment with Tokens Studio for Figma data
+• Next
+• Further alignment with Tokens Studio types
+
+Token Name Structure
+
+Token Name Structure
+Current
+
+component-top-to-workflow-icon-300
+
+Token Name Structure
+Current
+
+component-top-to-workflow-icon-300
+
+• Pros
+• Quick to write
+• Cons
+• Consistency
+• Onboarding
+
+Token Name Structure
+Current
+
+component-top-to-workflow-icon-300
+component
+
+top
+
+workflow-icon
+
+300
+
+Group
+
+Start
+
+End
+
+Index
+
+Relative
+
+Allow us to validate
+And reorder
+
+Token Name Structure
+Current
+
+• Now
+• Excel document splitting the token names into parts
+• Next
+• Test
+• Eventually
+• Find a way for designers/all to author name parts
+
+Component Options API
+
+Component Options API
+Schema
+
+Component Options API
+Schema
+
+• Now
+• All component options have been codi ed
+• Static website with the tables of options generated from schema
+• Next
+• Verify against spec les
+• Eventually
+
+fi
+
+fi
+
+fl
+
+• Authoring work ow
+
+Component Token
+Relationship
+
+Component Token Relationship
+Current de nition of tokens in components
+
+fi
+
+fi
+
+• Stored in spec les
+
+Component Token Relationship
+Component Token schema
+
+• Human readable
+• Codi ed, consumable
+• Validation
+• Reduced repetition
+• Expandable
+
+fi
+
+• States
+
+Component Token Relationship
+Component Token schema
+
+Component Token Relationship
+Component Token schema
+
+• Potential shortcomings
+• Harder to author
+
+fi
+
+• tech-speci c requirements
+
+Component Token Relationship
+Component Token schema
+
+• Now
+• Foundations in progress
+• Next
+• Work on this last piece
+• Eventually
+
+fi
+
+fl
+
+• Build Figma work ow to nd all tokens used in each component
+
+

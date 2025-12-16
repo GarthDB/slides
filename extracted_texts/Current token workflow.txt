@@ -1,0 +1,100 @@
+Overview of the current
+work ow
+
+fl
+
+Spectrum Design Data Onsite
+
+Authoring Process
+
+Token authoring process
+Overview
+Spectrum Tokens Workflow
+Figma
+
+Tokens Studio Plugin
+
+Tokens Studio Data Git Repo
+
+Automated Pull Request
+
+Spectrum Tokens Git
+Repo
+
+NPM
+Package
+
+Spectrum iOS
+
+Spectrum CSS
+
+(internal)
+
+@spectrum-css/tokens
+
+Spectrum Web Components
+
+Drover
+
+React
+
+(internal)
+
+Spectrum
+
+Qt (internal)
+
+Token authoring process
+Design
+• Design Review
+• Content Design Review (Kari/Jess)
+• Engineering Review (Garth)
+• Merge Figma Branch
+• Tokens Studio pull request authoring (Larz)
+
+Token authoring process
+Design
+
+Token authoring process
+Engineering
+• Tokens Studio pull request review (Garth)
+• Tokens Studio to Spectrum Tokens sync (Garth/Cable)
+• Spectrum Tokens clean up and release (Garth)
+• Announce (Garth)
+
+Distribution and
+Consumption
+
+Token distribution
+• NPM package publish
+
+f
+
+• GitHub release notes with Token Di
+
+Token consumption
+• Spectrum CSS
+• Spectrum Web Components
+• React Spectrum
+• Drover
+• SpiOS
+• Qt
+• Qt Widget
+
+Current Data Model
+
+value
+
+A name and a value - no associated component
+
+base token
+
+Semantic alias - a meaningful name and a reference to a value.
+
+alias
+
+alias
+
+button-accent-background-color-default
+
+

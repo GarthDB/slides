@@ -1,0 +1,169 @@
+Design Data
+Complexity
+
+07/21/2025
+
+Pain Points
+Maybe?
+
+Pain Points
+Maybe?
+• Everyone
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+
+fi
+
+• Spec les
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+• Spec les
+
+fi
+
+• Authoring tokens
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+• Spec les
+• Authoring tokens
+
+fi
+
+• Implementation Engineers
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+• Spec les
+• Authoring tokens
+• Implementation Engineers
+
+fi
+
+fi
+
+• Spec les
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+• Spec les
+• Authoring tokens
+• Implementation Engineers
+• Spec les
+
+fi
+
+fi
+
+• Leadership
+
+Pain Points
+Maybe?
+• Everyone
+• Finding the right token - name/value/everything
+• Spectrum Design
+• Spec les
+• Authoring tokens
+• Implementation Engineers
+• Spec les
+• Leadership
+
+fi
+
+fi
+
+• Reduce complexity
+
+value
+
+A name and a value - no associated component
+
+base token
+
+Semantic alias - a meaningful name and a reference to a value.
+
+alias
+
+alias
+
+button-accent-background-color-default
+
+button-accent-background-color-default
+
+Component Speci c Tokens
+• Cons
+• Everything is unique
+• Lack of consistency
+• Pros
+
+fi
+
+fi
+
+• Highly speci c
+
+System aliases
+• Cons
+• Component relationship not currently captured in design data
+• Reused?
+• Pros
+• Increased system consistency
+
+button-accent-background-color-default
+
+Semantic Alias?
+
+button-accent-background-color-default
+
+Semantic Alias?
+Semantic Alias?
+button-accent-background-color-default
+
+Pain Points
+Spectrum Design
+• A lot of data stored in Figma spec les
+• Easy to create new component-speci c tokens
+
+fi
+
+fi
+
+• Hard to revisit and consolidate to create system aliases
+
+To the extremes
+Semantic vs Component
+• Semantic (reduce number of tokens)
+• Maximum number of tokens
+• Constrain Design
+• Component
+• No force shared data between
+
+

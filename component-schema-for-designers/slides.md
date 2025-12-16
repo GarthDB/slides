@@ -258,3 +258,4 @@ class: text-center
     Component Schemas for Spectrum Designers • Doc Squad Data Group
   </span>
 </div>
+
