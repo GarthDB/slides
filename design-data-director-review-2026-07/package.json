@@ -1,0 +1,15 @@
+{
+  "name": "design-data-director-review-2026-07",
+  "version": "1.0.0",
+  "description": "Design Data July 31 Director Review",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export",
+    "export-pdf": "slidev export --format pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0",
+    "@slidev/theme-apple-basic": "^0.25.1"
+  }
+}

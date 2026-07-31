@@ -1,0 +1,59 @@
+#slidev-goto-dialog:not(:focus-within) {
+  top: -100vh !important;
+}
+
+.diagram-viewport {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+}
+
+.diagram-inner {
+  transition: transform 0.6s ease;
+  transform-origin: top center;
+}
+
+.diagram-hint {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.cov-track {
+  position: relative;
+  height: 1.75rem;
+  background: rgba(128, 128, 128, 0.15);
+  border-radius: 0.4rem;
+  overflow: hidden;
+  margin: 0.35rem 0;
+}
+
+.cov-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 0.4rem;
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cov-bar.low {
+  background: linear-gradient(90deg, #dc2626, #f87171);
+}
+
+.cov-row {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
