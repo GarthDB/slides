@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Tokens: before and after",
+    "output": ".archify/dataflow-before-after/before-after.html",
+    "quality_profile": "showcase"
+  },
+  "stages": [
+    { "label": "Author" },
+    { "label": "Sync / validate" },
+    { "label": "Source of truth" },
+    { "label": "Output" }
+  ],
+  "nodes": [
+    { "id": "figma", "type": "frontend", "label": "Figma", "sublabel": "designers edit", "stage": 0, "row": 0, "tag": "before" },
+    { "id": "studio", "type": "cloud", "label": "Tokens Studio", "sublabel": "plugin + sync repo", "stage": 1, "row": 0, "tag": "before" },
+    { "id": "tokens", "type": "database", "label": "Spectrum Tokens", "sublabel": "git repo", "stage": 2, "row": 0, "tag": "before" },
+    { "id": "platforms-old", "type": "backend", "label": "Platforms", "sublabel": "web, iOS, Qt", "stage": 3, "row": 0, "tag": "before" },
+    { "id": "authors", "type": "frontend", "label": "Authoring", "sublabel": "CLI, TUI, MCP", "stage": 0, "row": 2, "tag": "after" },
+    { "id": "validate", "type": "security", "label": "Validation", "sublabel": "schema + rules", "stage": 1, "row": 2, "tag": "after" },
+    { "id": "dd", "type": "database", "label": "Design Data", "sublabel": "canonical JSON", "stage": 2, "row": 2, "tag": "after" },
+    { "id": "vars", "type": "cloud", "label": "Figma Variables", "sublabel": "generated", "stage": 3, "row": 2, "tag": "after" },
+    { "id": "platforms-new", "type": "backend", "label": "Platforms", "sublabel": "web, iOS, Qt", "stage": 3, "row": 3, "tag": "after" }
+  ],
+  "flows": [
+    { "id": "b1", "from": "figma", "to": "studio", "label": "plugin push", "variant": "default" },
+    { "id": "b2", "from": "studio", "to": "tokens", "label": "automated PR", "variant": "default" },
+    { "id": "b3", "from": "tokens", "to": "platforms-old", "label": "npm package", "variant": "default" },
+    { "id": "a1", "from": "authors", "to": "validate", "label": "proposed edit", "variant": "emphasis" },
+    { "id": "a2", "from": "validate", "to": "dd", "label": "valid change", "variant": "emphasis" },
+    { "id": "a3", "from": "dd", "to": "vars", "label": "figma export", "variant": "emphasis" },
+    { "id": "a4", "from": "dd", "to": "platforms-new", "label": "platform builds", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "orange", "title": "Before", "items": ["Figma is the authoring surface", "Tokens flow one way: Figma to code", "Changes arrive as sync PRs"] },
+    { "dot": "emerald", "title": "After", "items": ["Design Data is the source of truth", "Figma Variables are generated from it", "Every change is validated first"] }
+  ]
+}

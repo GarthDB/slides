@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "How tokens become Figma Variables",
+    "output": ".archify/dataflow-pipeline/pipeline.html",
+    "quality_profile": "showcase"
+  },
+  "stages": [
+    { "label": "Read" },
+    { "label": "Resolve" },
+    { "label": "Map" },
+    { "label": "Write" }
+  ],
+  "nodes": [
+    { "id": "tokens", "type": "database", "label": "Tokens", "sublabel": "*.tokens.json", "stage": 0, "row": 0, "tag": "cascade" },
+    { "id": "modes", "type": "database", "label": "Mode sets", "sublabel": "light, dark, scales", "stage": 0, "row": 1, "tag": "declared" },
+    { "id": "graph", "type": "backend", "label": "Token graph", "sublabel": "aliases resolved", "stage": 1, "row": 0, "tag": "design-data-core" },
+    { "id": "specs", "type": "backend", "label": "Collection specs", "sublabel": "from mode sets", "stage": 1, "row": 1, "tag": "data-driven" },
+    { "id": "mapper", "type": "backend", "label": "Figma mapper", "sublabel": "variables + values", "stage": 2, "row": 0, "tag": "design-data-figma" },
+    { "id": "payload", "type": "backend", "label": "Payload", "sublabel": "one immutable POST", "stage": 2, "row": 1, "tag": "SHA-256" },
+    { "id": "file", "type": "cloud", "label": "Figma file", "sublabel": "Variables REST API", "stage": 3, "row": 0, "tag": "design-data figma export" }
+  ],
+  "flows": [
+    { "id": "p1", "from": "tokens", "to": "graph", "label": "load cascade", "variant": "emphasis" },
+    { "id": "p2", "from": "modes", "to": "specs", "label": "declared modes", "variant": "default" },
+    { "id": "p3", "from": "graph", "to": "mapper", "label": "resolved tokens", "variant": "emphasis" },
+    { "id": "p4", "from": "specs", "to": "mapper", "label": "collections", "variant": "default" },
+    { "id": "p5", "from": "mapper", "to": "payload", "label": "build", "variant": "default" },
+    { "id": "p6", "from": "payload", "to": "file", "label": "guarded write", "variant": "security" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "One source", "items": ["Reads canonical Design Data directly", "No legacy token package involved"] },
+    { "dot": "emerald", "title": "Collections follow data", "items": ["Modes come from declared mode sets", "Light, dark and scale modes land as Figma modes"] }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "design-show-and-tell-2026-10-figma-vars",
+  "version": "1.0.0",
+  "description": "Spectrum Design Data to Figma Vars — design show and tell",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --output exports/figma-vars.pdf",
+    "diagrams": "node export-diagrams.mjs"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0",
+    "@slidev/theme-apple-basic": "^0.25.1"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.40.0"
+  }
+}

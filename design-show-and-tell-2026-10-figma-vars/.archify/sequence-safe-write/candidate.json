@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "A guarded write to Figma",
+    "output": ".archify/sequence-safe-write/safe-write.html",
+    "quality_profile": "showcase"
+  },
+  "participants": [
+    {
+      "id": "designer",
+      "type": "external",
+      "label": "You",
+      "sublabel": "runs export"
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "design-data",
+      "sublabel": "figma export"
+    },
+    {
+      "id": "figma",
+      "type": "cloud",
+      "label": "Figma",
+      "sublabel": "Variables API"
+    }
+  ],
+  "messages": [
+    {
+      "from": "designer",
+      "to": "cli",
+      "y": 160,
+      "label": "figma export",
+      "variant": "emphasis"
+    },
+    {
+      "from": "cli",
+      "to": "figma",
+      "y": 215,
+      "label": "GET baseline"
+    },
+    {
+      "from": "figma",
+      "to": "cli",
+      "y": 260,
+      "label": "collections + variables",
+      "variant": "return"
+    },
+    {
+      "from": "cli",
+      "to": "figma",
+      "y": 320,
+      "label": "GET again",
+      "note": "Build the payload, then re-check for concurrent edits"
+    },
+    {
+      "from": "figma",
+      "to": "cli",
+      "y": 380,
+      "label": "unchanged",
+      "variant": "return"
+    },
+    {
+      "from": "cli",
+      "to": "figma",
+      "y": 425,
+      "label": "POST variables",
+      "variant": "emphasis"
+    },
+    {
+      "from": "cli",
+      "to": "figma",
+      "y": 470,
+      "label": "GET readback"
+    },
+    {
+      "from": "figma",
+      "to": "cli",
+      "y": 515,
+      "label": "written state",
+      "variant": "return"
+    },
+    {
+      "from": "cli",
+      "to": "designer",
+      "y": 570,
+      "label": "verified, or nonzero exit",
+      "variant": "return"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "orange",
+      "title": "Concurrent edits abort",
+      "items": [
+        "A changed file stops the write before POST"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Readback verifies",
+      "items": [
+        "Values, aliases and untouched variables are checked",
+        "Failures exit nonzero"
+      ]
+    }
+  ]
+}

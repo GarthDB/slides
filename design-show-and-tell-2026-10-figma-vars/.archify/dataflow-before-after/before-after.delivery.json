@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "497c1905-cf08-4559-845d-a0bc84022acb",
+  "status": "current",
+  "command": "deliver",
+  "type": "dataflow",
+  "input": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-before-after/candidate.json",
+  "output": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-before-after/before-after.html",
+  "specification": {
+    "sha256": "b1ee77a71a9600a476f8e440ece1134433ff5009bb4c624a5aa43efa085a2edf",
+    "bytes": 2665
+  },
+  "artifact": {
+    "sha256": "489ea947442c471cd721f83e3295b67ba47249fb06b07f8973dd976d3f155fb0",
+    "bytes": 817218
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/candidate.json",
+    "sha256": "8579d842b3feff04aa8b8319b7c1f730a297b4cbf07a00630718c4731d7c05b9",
+    "bytes": 2143
+  },
+  "artifact": {
+    "path": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/safe-write.html",
+    "sha256": "720fc6e352c56aec1090f550968ef3988b16cbbef369bb48ecf917623fa43a39",
+    "bytes": 808644
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/review-2/safe-write.finalize.json",
+    "summaryReceipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/review-2/safe-write.finalize-summary.json",
+    "browserCheckReceipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/review-2/safe-write.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-22T14:46:20.801Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4661,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

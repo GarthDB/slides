@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-pipeline/candidate.json",
+    "sha256": "64f5f6e0b072dbc1b6724c75792fc72348202415ebdd38bf822262258f117f98",
+    "bytes": 2292
+  },
+  "artifact": {
+    "path": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-pipeline/pipeline.html",
+    "sha256": "d23c9db27771a32fe863fe37110cae0864acfe08b63be8e1c79309a0cc4c9018",
+    "bytes": 813675
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-pipeline/pipeline.finalize.json",
+    "summaryReceipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-pipeline/pipeline.finalize-summary.json",
+    "browserCheckReceipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-pipeline/pipeline.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-22T14:46:20.801Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3910,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

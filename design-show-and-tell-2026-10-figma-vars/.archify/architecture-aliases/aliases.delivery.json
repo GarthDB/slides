@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "f318e614-8bb3-439d-a45b-ab4ddfa791e3",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/architecture-aliases/candidate.json",
+  "output": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/architecture-aliases/aliases.html",
+  "specification": {
+    "sha256": "01c2b336f1a1932a2230574d58d8a1d9c37e87557c9225bb18c17828f1c1cc0d",
+    "bytes": 2832
+  },
+  "artifact": {
+    "sha256": "a3240f7416237a48a4605140e2583a1615edf81af59d4172d282b410589f36e2",
+    "bytes": 823463
+  }
+}

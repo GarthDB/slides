@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "What lands in Figma",
+    "output": ".archify/architecture-aliases/aliases.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    { "id": "modeset", "type": "database", "label": "Mode-set token", "sublabel": "light / dark / wireframe", "pos": [40, 40], "size": [150, 64] },
+    { "id": "alias", "type": "database", "label": "Alias token", "sublabel": "points at another token", "pos": [40, 190], "size": [150, 64] },
+    { "id": "deprecated", "type": "database", "label": "Deprecated token", "sublabel": "has a replacement", "pos": [40, 340], "size": [150, 64] },
+    { "id": "unsupported", "type": "database", "label": "Typography, shadows", "sublabel": "no Variable type", "pos": [40, 490], "size": [150, 64] },
+    { "id": "mapper", "type": "backend", "label": "Figma mapper", "sublabel": "design-data figma export", "pos": [350, 240], "size": [170, 150] },
+    { "id": "multimode", "type": "cloud", "label": "Multi-mode variable", "sublabel": "one value per mode", "pos": [690, 40], "size": [160, 64] },
+    { "id": "varalias", "type": "cloud", "label": "Variable alias", "sublabel": "VARIABLE_ALIAS", "pos": [690, 190], "size": [160, 64] },
+    { "id": "redirect", "type": "cloud", "label": "Alias to replacement", "sublabel": "with --redirect-deprecated", "pos": [690, 340], "size": [160, 64] },
+    { "id": "report", "type": "security", "label": "Export summary", "sublabel": "skipped and reported", "pos": [690, 490], "size": [160, 64] }
+  ],
+  "connections": [
+    { "id": "c1", "from": "modeset", "to": "mapper", "label": "per-mode values" },
+    { "id": "c2", "from": "alias", "to": "mapper", "label": "target name" },
+    { "id": "c3", "from": "deprecated", "to": "mapper", "label": "replacement", "variant": "dashed" },
+    { "id": "c4", "from": "unsupported", "to": "mapper", "label": "excluded", "variant": "dashed" },
+    { "id": "o1", "from": "mapper", "to": "multimode", "label": "modes", "variant": "emphasis" },
+    { "id": "o2", "from": "mapper", "to": "varalias", "label": "alias", "variant": "emphasis" },
+    { "id": "o3", "from": "mapper", "to": "redirect", "label": "opt-in", "variant": "dashed" },
+    { "id": "o4", "from": "mapper", "to": "report", "label": "listed", "variant": "security" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Modes stay modes", "items": ["Light and dark values become Figma modes", "An alias to a mode set keeps its per-mode values"] },
+    { "dot": "orange", "title": "Deprecations", "items": ["By default a deprecated token keeps its value", "--redirect-deprecated aliases it to the replacement"] },
+    { "dot": "rose", "title": "Not exported", "items": ["Typography, drop shadows and gradients have no Variable type", "Android dp sizes are excluded and listed"] }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "3e93b553-bd26-48f1-bf78-fba6e36edd74",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/candidate.json",
+  "output": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/sequence-safe-write/safe-write.html",
+  "specification": {
+    "sha256": "8579d842b3feff04aa8b8319b7c1f730a297b4cbf07a00630718c4731d7c05b9",
+    "bytes": 2143
+  },
+  "artifact": {
+    "sha256": "720fc6e352c56aec1090f550968ef3988b16cbbef369bb48ecf917623fa43a39",
+    "bytes": 808644
+  }
+}

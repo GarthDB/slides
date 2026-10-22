@@ -1,0 +1,4 @@
+.archify/*/*.html
+node_modules
+dist
+exports
