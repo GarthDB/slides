@@ -71,7 +71,7 @@ Token Studio sunset: phases 0 to 2 are done; retiring the inbound sync is next.
 
 ---
 
-# Why designers should care
+# Why this matters
 
 - **One source of truth.** Figma and code read the same data
 - **No drift.** Re-run the export and the file matches the data
