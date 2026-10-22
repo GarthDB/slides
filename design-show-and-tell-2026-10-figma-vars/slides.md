@@ -22,6 +22,27 @@ tokens get into Figma.
 
 ---
 
+# 🌶️ Over-the-Top Smoked Chili
+
+<div class="grid grid-cols-2 gap-6 items-center">
+<img src="/chili/smoker.jpg" class="rounded shadow" style="max-height: 300px; object-fit: cover; width: 100%" />
+<img src="/chili/pot.jpg" class="rounded shadow" style="max-height: 300px; object-fit: cover; width: 100%" />
+</div>
+
+<div class="text-lg pt-4">
+
+Chili base in a Dutch oven, with the beef loaf smoked **over** it so the drippings fall in. Hickory, 275–300°F, 2 hours + 2 hours. Dark chocolate to finish.
+
+</div>
+
+<div class="text-sm opacity-60">Recipe: Erica's Recipes, "Smoked Chili (Over The Top)" · ericasrecipes.com/smoked-chili-over-the-top</div>
+
+<!--
+Joke slide. Recipe by Erica's Recipes. Base: onions, green peppers, garlic, chili powder, cumin, crushed and diced tomatoes, kidney beans. Beef loaf (85/15) with Worcestershire and Montreal seasoning smoked on a rack above the pot until 150F, crumbled in, cooked 2 more hours, no extra wood. Stir in dark chocolate at the end. (My pot also has extra beans and corn.)
+-->
+
+---
+
 # Your Figma variables can now be generated
 
 From the same data that ships to code. Not copied by hand. Not synced back and forth.
@@ -147,27 +168,6 @@ Best-effort guard, not an atomic transaction. The CLI never retries a mutation, 
 - A native mapper over the token graph
 
 **Where would you want this to run?** On every token change, nightly, or on demand?
-
----
-
-# 🌶️ Over-the-Top Smoked Chili
-
-<div class="grid grid-cols-2 gap-6 items-center">
-<img src="/chili/smoker.jpg" class="rounded shadow" style="max-height: 300px; object-fit: cover; width: 100%" />
-<img src="/chili/pot.jpg" class="rounded shadow" style="max-height: 300px; object-fit: cover; width: 100%" />
-</div>
-
-<div class="text-lg pt-4">
-
-Chili base in a Dutch oven, with the beef loaf smoked **over** it so the drippings fall in. Hickory, 275–300°F, 2 hours + 2 hours. Dark chocolate to finish.
-
-</div>
-
-<div class="text-sm opacity-60">Recipe: Erica's Recipes, "Smoked Chili (Over The Top)" · ericasrecipes.com/smoked-chili-over-the-top</div>
-
-<!--
-Joke slide. Recipe by Erica's Recipes. Base: onions, green peppers, garlic, chili powder, cumin, crushed and diced tomatoes, kidney beans. Beef loaf (85/15) with Worcestershire and Montreal seasoning smoked on a rack above the pot until 150F, crumbled in, cooked 2 more hours, no extra wood. Stir in dark chocolate at the end. (My pot also has extra beans and corn.)
--->
 
 ---
 class: text-center
