@@ -172,14 +172,22 @@ Best-effort guard, not an atomic transaction. The CLI never retries a mutation, 
 -->
 
 ---
+class: text-left
+---
 
 # What's next
 
-- Retire the Token Studio inbound sync (roadmap phase 3)
-- Publish flow for the generated library
-- A native mapper over the token graph
+<ul class="text-2xl leading-relaxed mt-8">
+  <li>Retire the Token Studio inbound sync (roadmap phase 3)</li>
+  <li>Publish flow for the generated library</li>
+  <li>iOS variables from the platform manifest</li>
+</ul>
+
+<div class="mt-12 p-6 rounded-xl bg-blue-50 text-2xl">
 
 **Where would you want this to run?** On every token change, nightly, or on demand?
+
+</div>
 
 ---
 class: text-center
