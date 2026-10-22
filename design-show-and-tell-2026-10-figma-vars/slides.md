@@ -129,6 +129,18 @@ No legacy token package is involved; export reads packages/design-data directly.
 
 ---
 
+# Next: iOS variables
+
+<img src="/diagrams/ios.png" class="mx-auto" style="max-height: 400px" />
+
+Same export, filtered by the iOS platform manifest.
+
+<!--
+Proposed, not built. The iOS platform manifest (platforms/ios/manifest.json) is an incubating POC: it pins foundation 3.6.0, includes color, size, typography, corner radius, border width and opacity, excludes wireframe, and has three teal overrides plus iOS-only extensions (1,118 imported token records, tab-bar). design-data already resolves a manifest with --platform ios. The Figma export doesn't take a platform yet; that is the proposed work. Overrides must keep the token's type.
+-->
+
+---
+
 # What lands in Figma
 
 <img src="/diagrams/aliases.png" class="mx-auto" style="max-height: 440px" />

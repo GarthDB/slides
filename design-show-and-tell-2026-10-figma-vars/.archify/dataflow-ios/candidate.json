@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "iOS Figma Variables from the platform cascade",
+    "output": ".archify/dataflow-ios/ios.html",
+    "quality_profile": "showcase"
+  },
+  "stages": [
+    { "label": "Foundation" },
+    { "label": "iOS manifest" },
+    { "label": "Cascade" },
+    { "label": "Figma" }
+  ],
+  "nodes": [
+    { "id": "foundation", "type": "database", "label": "Foundation tokens", "sublabel": "packages/design-data", "stage": 0, "row": 0, "tag": "shared" },
+    { "id": "manifest", "type": "database", "label": "iOS manifest", "sublabel": "include, exclude, overrides", "stage": 1, "row": 0, "tag": "platforms/ios" },
+    { "id": "extensions", "type": "database", "label": "iOS extensions", "sublabel": "iOS-only tokens, components", "stage": 1, "row": 1, "tag": "platforms/ios" },
+    { "id": "resolved", "type": "backend", "label": "iOS token graph", "sublabel": "foundation + iOS layer", "stage": 2, "row": 0, "tag": "cascade" },
+    { "id": "export", "type": "backend", "label": "Figma export", "sublabel": "same mapper as web", "stage": 2, "row": 1, "tag": "proposed" },
+    { "id": "file", "type": "cloud", "label": "iOS Figma file", "sublabel": "Variables REST API", "stage": 3, "row": 0, "tag": "iOS variables" }
+  ],
+  "flows": [
+    { "id": "f1", "from": "foundation", "to": "manifest", "label": "pinned version", "variant": "emphasis" },
+    { "id": "f2", "from": "manifest", "to": "resolved", "label": "filter + override", "variant": "emphasis" },
+    { "id": "f3", "from": "extensions", "to": "resolved", "label": "adds iOS layer", "variant": "default" },
+    { "id": "f4", "from": "resolved", "to": "export", "label": "iOS tokens", "variant": "default" },
+    { "id": "f5", "from": "export", "to": "file", "label": "guarded write", "variant": "security" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Same data, iOS view", "items": ["Manifest picks which tokens apply", "Overrides keep each token's type"] },
+    { "dot": "amber", "title": "Proposed, not built", "items": ["Export reads the iOS cascade", "iOS manifest exists today as a POC"] }
+  ]
+}

@@ -8,6 +8,7 @@ const root = path.dirname(new URL(import.meta.url).pathname);
 const diagrams = {
   'before-after': 'dataflow-before-after/before-after.html',
   pipeline: 'dataflow-pipeline/pipeline.html',
+  ios: 'dataflow-ios/ios.html',
   'safe-write': 'sequence-safe-write/safe-write.html',
   aliases: 'architecture-aliases/aliases.html',
 };

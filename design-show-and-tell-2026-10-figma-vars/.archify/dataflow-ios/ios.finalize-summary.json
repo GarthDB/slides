@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/candidate.json",
+    "sha256": "6c1973ebcb73ce109f8b4b8f874f9f0c89e8a51a5ef8db1f30137c96ea712bed",
+    "bytes": 2129
+  },
+  "artifact": {
+    "path": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/ios.html",
+    "sha256": "ff54eca2e2e4475688870a5345dc3e311f2ea8d100b11700fc278909893fbcb0",
+    "bytes": 812226
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/ios.finalize.json",
+    "summaryReceipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/ios.finalize-summary.json",
+    "browserCheckReceipt": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/ios.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-22T14:46:20.801Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4568,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

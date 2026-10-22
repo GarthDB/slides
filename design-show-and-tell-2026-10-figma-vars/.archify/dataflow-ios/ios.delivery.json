@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "00202eaa-0c24-4858-9451-4330825d2392",
+  "status": "current",
+  "command": "deliver",
+  "type": "dataflow",
+  "input": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/candidate.json",
+  "output": "/Users/garthdb/Spectrum/slides/design-show-and-tell-2026-10-figma-vars/.archify/dataflow-ios/ios.html",
+  "specification": {
+    "sha256": "6c1973ebcb73ce109f8b4b8f874f9f0c89e8a51a5ef8db1f30137c96ea712bed",
+    "bytes": 2129
+  },
+  "artifact": {
+    "sha256": "ff54eca2e2e4475688870a5345dc3e311f2ea8d100b11700fc278909893fbcb0",
+    "bytes": 812226
+  }
+}
