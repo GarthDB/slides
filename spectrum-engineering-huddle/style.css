@@ -1,0 +1,112 @@
+/* Copyright 2026 Adobe. All rights reserved. */
+
+/* Spectrum (light/dark) values from packages/tokens/src/color-palette.json */
+:root {
+  --s-font: 'Adobe Clean Spectrum VF', 'Adobe Clean', sans-serif;
+  --s-bg: rgb(255, 255, 255);          /* gray-25 */
+  --s-layer: rgb(248, 248, 248);       /* gray-50 */
+  --s-border: rgb(225, 225, 225);      /* gray-200 */
+  --s-text: rgb(41, 41, 41);           /* gray-800 */
+  --s-heading: rgb(19, 19, 19);        /* gray-900 */
+  --s-muted: rgb(80, 80, 80);          /* gray-700 */
+  --s-accent: rgb(59, 99, 251);        /* blue-900 */
+  --s-positive: rgb(5, 131, 78);       /* green-900 */
+  --s-negative: rgb(215, 50, 32);      /* red-900 */
+  --slidev-slide-container-background: var(--s-bg);
+  --slidev-theme-primary: var(--s-accent);
+  --slidev-code-background: var(--s-layer);
+  --slidev-code-radius: 8px;
+}
+
+html.dark {
+  --s-bg: rgb(17, 17, 17);
+  --s-layer: rgb(27, 27, 27);
+  --s-border: rgb(50, 50, 50);
+  --s-text: rgb(219, 219, 219);
+  --s-heading: rgb(242, 242, 242);
+  --s-muted: rgb(175, 175, 175);
+  --s-accent: rgb(86, 129, 255);
+  --s-positive: rgb(9, 157, 89);
+  --s-negative: rgb(252, 67, 46);
+}
+
+body,
+.slidev-layout {
+  font-family: var(--s-font);
+  background: var(--s-bg);
+  color: var(--s-text);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  font-family: var(--s-font);
+  font-weight: 800;
+  color: var(--s-heading);
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h1 { font-size: 2.4rem; }
+.slidev-layout h2 { font-size: 1.7rem; }
+.slidev-layout a { color: var(--s-accent); border-bottom: 0; }
+.slidev-layout blockquote { border-inline-start: 4px solid var(--s-accent); color: var(--s-muted); }
+.slidev-layout th, .slidev-layout td { border-color: var(--s-border); }
+
+#slidev-goto-dialog.-top-20 .autocomplete-list {
+  display: none !important;
+}
+
+.slidev-layout.section > div {
+  text-align: left;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  line-height: 1.1;
+}
+
+.slidev-layout.cover h1 {
+  line-height: 1.1;
+}
+
+.diff-table {
+  background: var(--s-layer);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+}
+.diff-table .diff-id { color: var(--s-muted); margin-bottom: 0.3rem; }
+.diff-table table { border-collapse: collapse; width: 100%; }
+.diff-table th, .diff-table td { text-align: left; padding: 0.15rem 0.8rem 0.15rem 0; border: 0; white-space: nowrap; }
+.diff-table th { color: var(--s-muted); font-weight: 600; }
+.diff-table .dim, .diff-table .dim * { opacity: 0.4; }
+.diff-table tr, .diff-table thead { transition: opacity 0.2s; }
+.diff-table .pass { color: var(--s-positive); font-weight: 700; }
+.diff-table .fail { color: var(--s-negative); font-weight: 700; }
+.diff-table .tag {
+  color: var(--s-accent);
+  background: color-mix(in srgb, var(--s-accent) 14%, transparent);
+  border-radius: 999px;
+  padding: 0.05rem 0.55rem;
+  font-weight: 600;
+}
+
+.cmp-label { font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--s-heading); }
+.cmp-label span { font-weight: 400; color: var(--s-muted); font-size: 0.85rem; margin-left: 0.4rem; }
+.cmp-label.ios { color: var(--s-accent); }
+.cmp-facts { list-style: none; padding: 0; margin: 0.6rem 0 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.cmp-facts li { margin: 0; padding: 0.15rem 0.7rem; border-radius: 999px; font-size: 0.85rem; background: var(--s-layer); border: 1px solid var(--s-border); }
+.cmp-facts li::before { display: none; }
+.cmp-facts.ios li { color: var(--s-accent); border-color: color-mix(in srgb, var(--s-accent) 40%, transparent); background: color-mix(in srgb, var(--s-accent) 10%, transparent); }
+
+.cmp-table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.cmp-table th, .cmp-table td { text-align: left; padding: 0.55rem 1rem 0.55rem 0; border: 0; border-bottom: 1px solid var(--s-border); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.cmp-table thead th { font-family: var(--s-font); font-size: 1rem; font-weight: 800; }
+.cmp-table thead th.ios, .cmp-table td.ios { color: var(--s-accent); }
+.cmp-table tbody th { color: var(--s-muted); font-weight: 600; width: 14rem; }
+.cmp-table td.none { color: var(--s-muted); font-style: italic; }
+.cmp-table tr.result td { font-weight: 700; font-family: var(--s-font); font-size: 1.15rem; }
+.cmp-facts li::marker { content: ''; }

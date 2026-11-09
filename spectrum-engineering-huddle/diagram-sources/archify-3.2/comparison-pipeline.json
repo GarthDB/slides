@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Visual comparison",
+    "quality_profile": "showcase",
+    "viewBox": [
+      960,
+      380
+    ],
+    "legend": {
+      "mode": "hidden"
+    },
+    "output": "comparison-pipeline.html"
+  },
+  "stages": [
+    {
+      "label": "Inputs"
+    },
+    {
+      "label": "Normalize"
+    },
+    {
+      "label": "Compare"
+    },
+    {
+      "label": "Result"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "batch",
+      "type": "backend",
+      "label": "render --batch",
+      "sublabel": "expected scenes",
+      "stage": 0,
+      "row": 0,
+      "width": 150
+    },
+    {
+      "id": "sb",
+      "type": "frontend",
+      "label": "Storybook",
+      "sublabel": "RSP S2 · SWC",
+      "stage": 0,
+      "row": 1
+    },
+    {
+      "id": "measured",
+      "type": "database",
+      "label": "measured.json",
+      "sublabel": "boxes · styles",
+      "stage": 1,
+      "row": 1,
+      "width": 150
+    },
+    {
+      "id": "rc",
+      "type": "backend",
+      "label": "render-compare",
+      "sublabel": "± tolerance",
+      "stage": 2,
+      "row": 0,
+      "width": 150,
+      "yOffset": 7
+    },
+    {
+      "id": "rep",
+      "type": "cloud",
+      "label": "Report",
+      "sublabel": "→ gap issues",
+      "stage": 3,
+      "row": 0,
+      "yOffset": 7
+    }
+  ],
+  "flows": [
+    {
+      "from": "batch",
+      "to": "rc",
+      "label": "expected",
+      "variant": "emphasis",
+      "via": [[230, 157], [230, 180], [400, 180], [400, 164]]
+    },
+    {
+      "from": "sb",
+      "to": "measured",
+      "label": "capture"
+    },
+    {
+      "from": "measured",
+      "to": "rc",
+      "label": "measured"
+    },
+    {
+      "from": "rc",
+      "to": "rep",
+      "label": "token per diff",
+      "variant": "emphasis"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "How a render is produced",
+    "quality_profile": "showcase",
+    "viewBox": [
+      960,
+      380
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "stages": [
+    {
+      "label": "Design data"
+    },
+    {
+      "label": "Binding"
+    },
+    {
+      "label": "Layout"
+    },
+    {
+      "label": "Outputs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tokens",
+      "type": "database",
+      "label": "Tokens + modes",
+      "sublabel": "after platform cascade",
+      "stage": 0,
+      "row": 0
+    },
+    {
+      "id": "component",
+      "type": "database",
+      "label": "Component",
+      "sublabel": "anatomy \u00b7 options",
+      "stage": 0,
+      "row": 1
+    },
+    {
+      "id": "relationships",
+      "type": "database",
+      "label": "Relationships",
+      "sublabel": "part \u2194 token",
+      "stage": 1,
+      "row": 0
+    },
+    {
+      "id": "recipe",
+      "type": "frontend",
+      "label": "Visual recipe",
+      "sublabel": "layout bound to data",
+      "stage": 1,
+      "row": 1
+    },
+    {
+      "id": "solver",
+      "type": "backend",
+      "label": "Rust solver",
+      "sublabel": "scene + token per value",
+      "stage": 2,
+      "row": 1
+    },
+    {
+      "id": "outputs",
+      "type": "cloud",
+      "label": "Every surface",
+      "sublabel": "CLI \u00b7 web \u00b7 specs \u00b7 Figma \u00b7 compare",
+      "stage": 3,
+      "row": 1,
+      "width": 150
+    }
+  ],
+  "flows": [
+    {
+      "from": "tokens",
+      "to": "relationships",
+      "label": "values"
+    },
+    {
+      "from": "relationships",
+      "to": "recipe",
+      "label": "token bindings",
+      "labelDy": 24
+    },
+    {
+      "from": "component",
+      "to": "recipe",
+      "label": "parts \u00b7 options",
+      "variant": "emphasis"
+    },
+    {
+      "from": "recipe",
+      "to": "solver",
+      "label": "resolve",
+      "variant": "emphasis"
+    },
+    {
+      "from": "solver",
+      "to": "outputs",
+      "label": "scene",
+      "variant": "emphasis"
+    }
+  ]
+}
