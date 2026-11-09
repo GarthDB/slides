@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Figma authoring and token mapping",
+    "quality_profile": "showcase",
+    "viewBox": [
+      960,
+      360
+    ],
+    "legend": {
+      "mode": "hidden"
+    },
+    "output": "figma-authoring.html"
+  },
+  "stages": [
+    {
+      "label": "Authoring"
+    },
+    {
+      "label": "Design data"
+    },
+    {
+      "label": "Consumers"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "figma",
+      "type": "frontend",
+      "label": "Figma variables",
+      "sublabel": "designers author",
+      "stage": 0,
+      "row": 0,
+      "width": 150
+    },
+    {
+      "id": "tokens",
+      "type": "database",
+      "label": "design-data tokens",
+      "sublabel": "uuid · conceptId",
+      "stage": 1,
+      "row": 0,
+      "width": 160
+    },
+    {
+      "id": "rel",
+      "type": "database",
+      "label": "Relationships",
+      "sublabel": "part ↔ token",
+      "stage": 2,
+      "row": 0
+    }
+  ],
+  "flows": [
+    {
+      "from": "figma",
+      "to": "tokens",
+      "label": "import · diff",
+      "variant": "emphasis",
+      "labelAt": [
+        205,
+        118
+      ]
+    },
+    {
+      "from": "tokens",
+      "to": "figma",
+      "label": "collection · name · modes",
+      "labelAt": [
+        205,
+        200
+      ]
+    },
+    {
+      "from": "tokens",
+      "to": "rel",
+      "label": "bind"
+    }
+  ]
+}

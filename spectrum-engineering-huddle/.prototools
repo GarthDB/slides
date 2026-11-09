@@ -1,0 +1,4 @@
+# Copyright 2026 Adobe. All rights reserved.
+
+node = "20.20.0"
+pnpm = "10.17.1"

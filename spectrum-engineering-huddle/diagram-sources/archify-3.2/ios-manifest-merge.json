@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "iOS through a platform manifest",
+    "quality_profile": "showcase",
+    "viewBox": [
+      960,
+      380
+    ],
+    "legend": {
+      "mode": "hidden"
+    },
+    "output": "ios-manifest-merge.html"
+  },
+  "stages": [
+    {
+      "label": "Inputs"
+    },
+    {
+      "label": "Manifest"
+    },
+    {
+      "label": "Graph"
+    },
+    {
+      "label": "Outputs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "found",
+      "type": "database",
+      "label": "Foundation data",
+      "sublabel": "pinned version",
+      "stage": 0,
+      "row": 0,
+      "width": 150
+    },
+    {
+      "id": "ext",
+      "type": "database",
+      "label": "iOS extensions",
+      "sublabel": "tokens · recipes",
+      "stage": 0,
+      "row": 1,
+      "width": 150
+    },
+    {
+      "id": "man",
+      "type": "backend",
+      "label": "iOS manifest",
+      "sublabel": "filters · overrides",
+      "stage": 1,
+      "row": 0,
+      "width": 150,
+      "yOffset": 7
+    },
+    {
+      "id": "graph",
+      "type": "database",
+      "label": "Merged graph",
+      "sublabel": "iOS view",
+      "stage": 2,
+      "row": 0,
+      "yOffset": 7
+    },
+    {
+      "id": "out",
+      "type": "cloud",
+      "label": "Every surface",
+      "sublabel": "render · site · specs · diff",
+      "stage": 3,
+      "row": 0,
+      "width": 170,
+      "yOffset": 7
+    }
+  ],
+  "flows": [
+    {
+      "from": "found",
+      "to": "man",
+      "label": "filter",
+      "via": [[188, 157], [188, 180], [225, 180], [225, 164]],
+      "labelAt": [188, 119]
+    },
+    {
+      "from": "ext",
+      "to": "man",
+      "label": "extend",
+      "variant": "emphasis"
+    },
+    {
+      "from": "man",
+      "to": "graph",
+      "label": "merge",
+      "variant": "emphasis"
+    },
+    {
+      "from": "graph",
+      "to": "out",
+      "label": "resolve",
+      "variant": "emphasis"
+    }
+  ]
+}

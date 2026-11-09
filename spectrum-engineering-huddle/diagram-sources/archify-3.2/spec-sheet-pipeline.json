@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Generated spec sheets",
+    "quality_profile": "showcase",
+    "viewBox": [
+      960,
+      380
+    ],
+    "legend": {
+      "mode": "hidden"
+    },
+    "output": "spec-sheet-pipeline.html"
+  },
+  "stages": [
+    {
+      "label": "Source"
+    },
+    {
+      "label": "Generate"
+    },
+    {
+      "label": "Sheet data"
+    },
+    {
+      "label": "Outputs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "recipe",
+      "type": "frontend",
+      "label": "Visual recipe",
+      "sublabel": "+ design data",
+      "stage": 0,
+      "row": 0
+    },
+    {
+      "id": "plan",
+      "type": "backend",
+      "label": "plan.mjs",
+      "sublabel": "stale check",
+      "stage": 0,
+      "row": 1
+    },
+    {
+      "id": "ss",
+      "type": "backend",
+      "label": "spec-sheet",
+      "sublabel": "design-data CLI",
+      "stage": 1,
+      "row": 0
+    },
+    {
+      "id": "json",
+      "type": "database",
+      "label": "Sheet JSON",
+      "sublabel": "scenes · tokens · log",
+      "stage": 2,
+      "row": 0,
+      "width": 150
+    },
+    {
+      "id": "hub",
+      "type": "cloud",
+      "label": "Hub /specs/",
+      "sublabel": "web pages",
+      "stage": 3,
+      "row": 0,
+      "yOffset": -7
+    },
+    {
+      "id": "plugin",
+      "type": "frontend",
+      "label": "Figma plugin",
+      "sublabel": "writes spec files",
+      "stage": 3,
+      "row": 1,
+      "width": 150,
+      "yOffset": -7
+    }
+  ],
+  "flows": [
+    {
+      "from": "recipe",
+      "to": "ss",
+      "label": "render",
+      "variant": "emphasis"
+    },
+    {
+      "from": "ss",
+      "to": "json",
+      "label": "emit",
+      "variant": "emphasis"
+    },
+    {
+      "from": "json",
+      "to": "hub",
+      "label": "publish",
+      "via": [[625, 157], [625, 128], [665, 128], [665, 150]],
+      "labelAt": [625, 119]
+    },
+    {
+      "from": "json",
+      "to": "plugin",
+      "label": "payload"
+    },
+    {
+      "from": "plan",
+      "to": "plugin",
+      "label": "stale only",
+      "variant": "dashed",
+      "via": [[250, 271], [250, 248], [560, 248], [560, 264]]
+    }
+  ]
+}
